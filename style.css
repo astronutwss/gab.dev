@@ -48,7 +48,8 @@ body {
     opacity: 1; 
 }
 
-.say-hi-btn, .resume-btn {
+/* Consolidated Button Styles (Only .say-hi-btn remains) */
+.say-hi-btn {
     padding: 8px 15px;
     margin-left: 10px;
     border: none;
@@ -59,17 +60,8 @@ body {
     display: inline-block;
     text-align: center;
     text-decoration: none;
-}
-
-.say-hi-btn {
     background-color: var(--color-accent-teal);
     color: var(--color-bg-primary);
-}
-
-.resume-btn {
-    background-color: var(--color-bg-primary);
-    color: var(--color-accent-teal);
-    border: 1px solid var(--color-accent-teal);
 }
 
 .about-section {
@@ -101,11 +93,6 @@ body {
     max-height: 400px;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
-}
-
-.bio-container > p:first-child {
-    color: var(--color-accent-teal);
-    font-size: 0.9em;
 }
 
 .bio-container h1 {
@@ -345,6 +332,7 @@ body {
     margin-top: 15px;
 }
 
+/* --- FOOTER STYLES (FIXED) --- */
 footer {
     max-width: 100%;
     padding: 30px 40px;
@@ -354,10 +342,21 @@ footer {
     font-size: 0.9em;
     color: #a0a0a0;
     border-top: 1px solid #383A59;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 footer p {
     margin-bottom: 10px;
+}
+
+.footer-contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; 
 }
 
 .footer-contact a {
