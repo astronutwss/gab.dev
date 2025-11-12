@@ -1,11 +1,9 @@
-/* --- GLOBAL STYLES & FONT SETUP (AESTHETIC THEME) --- */
 :root {
-    /* Define color variables for aesthetic theme */
-    --color-bg-primary: #282A36;     /* Deep Dark Purple (Main Background) */
-    --color-bg-secondary: #44475A;   /* Lighter Purple (Card/Nav Background) */
-    --color-text-primary: #F8F8F2;   /* Off-White (Main Text) */
-    --color-accent-teal: #8BE9FD;    /* Soft Teal (Primary Accent) */
-    --color-highlight-pink: #FF79C6; /* Pink (H1, Links, Highlighting) */
+    --color-bg-primary: #282A36;
+    --color-bg-secondary: #44475A;
+    --color-text-primary: #F8F8F2;
+    --color-accent-teal: #8BE9FD;
+    --color-highlight-pink: #FF79C6;
 }
 
 body {
@@ -17,7 +15,6 @@ body {
     box-sizing: border-box;
 }
 
-/* --- NAVIGATION BAR STYLES --- */
 .navigation {
     display: flex; 
     justify-content: space-between; 
@@ -51,7 +48,6 @@ body {
     opacity: 1; 
 }
 
-/* --- BUTTON STYLES (NOW APPLIED TO BOTH BUTTONS AND ANCHOR TAGS WITH THESE CLASSES) --- */
 .say-hi-btn, .resume-btn {
     padding: 8px 15px;
     margin-left: 10px;
@@ -60,7 +56,6 @@ body {
     cursor: pointer;
     font-weight: bold;
     transition: opacity 0.3s, background-color 0.3s;
-    /* Added for the new anchor tag to behave like a button */
     display: inline-block;
     text-align: center;
     text-decoration: none;
@@ -77,7 +72,6 @@ body {
     border: 1px solid var(--color-accent-teal);
 }
 
-/* --- MAIN ABOUT SECTION LAYOUT --- */
 .about-section {
     max-width: 1200px;
     margin: 50px auto; 
@@ -91,7 +85,6 @@ body {
     flex: 2;
 }
 
-/* --- PHOTO CONTAINER STYLES --- */
 .photo-container {
     flex: 1; 
     display: flex;
@@ -110,7 +103,6 @@ body {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
 }
 
-/* --- TEXT STYLES --- */
 .bio-container > p:first-child {
     color: var(--color-accent-teal);
     font-size: 0.9em;
@@ -130,7 +122,6 @@ body {
     color: var(--color-accent-teal);
 }
 
-/* SUMMARY PARAGRAPH STYLES & HIGHLIGHTING FIX */
 .summary {
     font-size: 1em;
     line-height: 1.6;
@@ -139,13 +130,11 @@ body {
     transition: box-shadow 0.3s;
 }
 
-/* Style the bolded text (<strong>) to be teal and slightly brighter */
 .summary strong {
     color: var(--color-accent-teal);
     font-weight: bold;
 }
 
-/* Aesthetic White Glow on Hover */
 .summary:hover {
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.7); 
 }
@@ -168,26 +157,23 @@ body {
     margin-top: 15px;
 }
 
-/* --- SOCIAL LINKS STYLES --- */
 .social-links {
     margin-top: 20px;
 }
 
-/* Remove old text-based icon styling */
 .social-links .icon {
     display: none; 
 }
 
-/* New image-based social icon styling */
 .social-links .social-icon {
     width: 30px;
     height: 30px;
     border-radius: 50%;
     object-fit: contain;
-    padding: 4px; /* Space inside the border */
+    padding: 4px;
     border: 1px solid var(--color-text-primary);
     transition: background-color 0.3s, border-color 0.3s;
-    background-color: var(--color-bg-primary); /* Default background */
+    background-color: var(--color-bg-primary);
 }
 
 .social-links a:hover .social-icon {
@@ -195,9 +181,6 @@ body {
     border-color: var(--color-accent-teal);
     box-shadow: 0 0 10px rgba(139, 233, 253, 0.8);
 }
-
-
-/* --- TECH STACKS SECTION STYLES --- */
 
 .tech-stacks-section {
     max-width: 1200px;
@@ -212,7 +195,6 @@ body {
 
 .tech-header-tabs span {
     padding: 10px 20px;
-    margin-right: 10px;
     cursor: pointer;
     font-size: 1.1em;
     color: var(--color-text-primary);
@@ -255,14 +237,13 @@ body {
     width: 80px; 
 }
 
-/* Logo style for images */
 .icon-logo {
     width: 50px;
     height: 50px;
-    object-fit: contain; /* Ensures logo fits without cropping */
+    object-fit: contain;
     border: 1px solid var(--color-highlight-pink);
     border-radius: 5px;
-    padding: 5px; /* Added padding to make logo look clean inside the border */
+    padding: 5px;
     margin-bottom: 5px;
     background-color: var(--color-bg-secondary);
     transition: transform 0.2s, box-shadow 0.3s;
@@ -278,9 +259,6 @@ body {
     font-size: 0.8em;
     color: var(--color-text-primary);
 }
-
-
-/* --- PROJECTS SECTION STYLES --- */
 
 .projects-section {
     max-width: 1200px;
@@ -316,17 +294,14 @@ body {
 .project-image-placeholder {
     height: 150px;
     background-color: #383A59;
-    /* Removed justify-content/align-items to correctly position the image */
 }
 
-/* ADDED: Style the image within the placeholder to cover the area */
 .project-image-placeholder img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures the image covers the entire 150px height without distortion, cropping as necessary */
+    object-fit: cover; 
     display: block;
 }
-
 
 .project-info {
     padding: 20px;
@@ -370,16 +345,37 @@ body {
     margin-top: 15px;
 }
 
+footer {
+    max-width: 100%;
+    padding: 30px 40px;
+    margin-top: 50px;
+    background-color: var(--color-bg-secondary);
+    text-align: center;
+    font-size: 0.9em;
+    color: #a0a0a0;
+    border-top: 1px solid #383A59;
+}
 
-/* --- MOBILE RESPONSIVENESS (Media Query) --- */
+footer p {
+    margin-bottom: 10px;
+}
+
+.footer-contact a {
+    color: var(--color-accent-teal);
+    text-decoration: none;
+    margin: 0 5px;
+    transition: color 0.3s;
+}
+
+.footer-contact a:hover {
+    color: var(--color-highlight-pink);
+}
 
 @media (max-width: 768px) {
-    /* General Padding Adjustments */
-    .navigation, .about-section, .tech-stacks-section, .projects-section {
+    .navigation, .about-section, .tech-stacks-section, .projects-section, footer {
         padding: 10px 20px;
     }
     
-    /* About Section: Stack Text and Image */
     .about-section {
         flex-direction: column;
         gap: 30px;
@@ -389,7 +385,6 @@ body {
         font-size: 2em;
     }
     
-    /* Photo Container: Make the image take full width */
     .photo-container {
         width: 100%;
         height: auto;
@@ -400,12 +395,10 @@ body {
         max-height: 300px;
     }
     
-    /* Navigation Links: Hide most links, keep buttons */
     .nav-links a {
         display: none;
     }
     
-    /* Project Grid: Cards should stack nicely */
     .project-grid {
         grid-template-columns: 1fr;
     }
